@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环保宣传</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 添加样式以控制轮播图图片的大小 */
+        .carousel .slides img {
+            max-width: 100%; /* 最大宽度为100% */
+            max-height: 400px; /* 最大高度为300像素，可以根据需要调整 */
+            width: auto; /* 保持宽高比 */
+            height: auto; /* 保持宽高比 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>保护环境，人人有责</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a>
+                    <ul class="submenu">
+                        <li><a href="#">团队介绍</a></li>
+                        <li><a href="#">我们的使命</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">活动</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carousel">
+        <div class="slides">
+            <img src="images/slide1.jpg" alt="环保图片1">
+            <img src="images/slide2.jpg" alt="环保图片2">
+            <img src="images/slide3.jpg" alt="环保图片3">
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>为什么要保护环境</h2>
+        <p>保护环境是每个人的责任，绿色生活方式可以改善我们的生活质量，减少污染，保护生态系统。</p>
+    </section>
+
+    <footer>
+        <div id="clock"></div>
+        <p>&copy; 2024 环保宣传. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
