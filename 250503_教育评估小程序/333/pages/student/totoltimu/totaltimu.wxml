@@ -1,0 +1,25 @@
+<!--pages/totoltimu/totaltimu.wxml-->
+<view class="container">
+  <view class="question-container">
+    <view class="section-title">一、评估常识</view>
+    <view class="question" wx:for="{{questions}}" wx:key="index">
+      <view class="question-title">{{item.title}}</view>
+      <view class="question-answer">{{item.answer}}</view>
+    </view>
+  </view>
+  <view class="section-title">二、热词解读</view>
+  <view class="question" wx:for="{{keywords}}" wx:key="index">
+    <view class="question-title">{{item.term}}</view>
+    <view class="question-answer">{{item.definition}}</view>
+  </view>
+  <view class="section-title">三、校史校情</view>
+  <view class="question" wx:for="{{history}}" wx:key="index">
+    <view class="question-title">{{item.title}}</view>
+    <view class="question-answer">{{item.content}}</view>
+  </view>
+  <view class="section-title">四、参评指南</view>
+  <view class="question" wx:for="{{guidelines}}" wx:key="index">
+    <view class="question-title">{{item.title}}</view>
+    <view class="question-answer">{{item.description}}</view>
+  </view>
+</view>

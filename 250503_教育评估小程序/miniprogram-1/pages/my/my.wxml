@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="header">
+        <image class="avatar" src="{{avatarUrl}}" bindtap="changeAvatar"></image>
+        <view class="user-info-wrapper">
+            <view class="user-info">
+                <text class="student-name">{{userInfo.name}}</text>
+                <text class="student-id">{{userInfo.id}}</text>
+            </view>
+            <image class="logout-icon" src="/images/logout.png" bindtap="showLogoutModal"></image>
+        </view>
+    </view>
+    <view class="function-list">
+        <navigator url="/pages/my/basicInfo/basicInfo" class="function-item">
+            <image class="function-image" src="/images/basic_info.png"></image>
+            <text class="function-text">基础信息</text>
+        </navigator>
+        <navigator url="/pages/my/accountSecurity/accountSecurity" class="function-item">
+            <image class="function-image" src="/images/account_security.png"></image>
+            <text class="function-text">账号安全</text>
+        </navigator>
+        <navigator url="/pages/my/systemNotificationDetail/systemNotificationDetail" class="function-item">
+            <image class="function-image" src="/images/system_notification.png"></image>
+            <text class="function-text">系统通知</text>
+        </navigator>
+        <navigator url="/pages/my/feedbackHelpDetail/feedbackHelpDetail" class="function-item">
+            <image class="function-image" src="/images/feedback_help.png"></image>
+            <text class="function-text">反馈与帮助</text>
+        </navigator>
+        <navigator url="/pages/my/achievements/achievements" class="function-item">
+            <image class="function-image" src="/images/achievements.png"></image>
+            <text class="function-text">成就</text>
+        </navigator>
+        <navigator url="/pages/my/userAgreement/userAgreement" class="function-item">
+            <image class="function-image" src="/images/settings.png"></image>
+            <text class="function-text">用户协议</text>
+        </navigator>
+    </view>
+    <!-- 退出登录模态框 -->
+    <view class="modal-mask" wx:if="{{showLogoutModal}}">
+        <view class="modal-content">
+            <view class="modal-title">退出</view>
+            <view class="modal-message">确定要退出登录吗?</view>
+            <view class="modal-buttons">
+                <button class="modal-cancel" bindtap="hideLogoutModal">取消</button>
+                <button class="modal-confirm" bindtap="logout">退出</button>
+            </view>
+        </view>
+    </view>
+</view>
+<custom-tab-bar />

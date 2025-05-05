@@ -1,0 +1,15 @@
+<!--pages/my/userFeedback/userFeedback.wxml-->
+<view class="modal-container">
+    <view class="modal-content">
+        <view class="modal-header">
+            <text class="header-text">用户反馈</text>
+        </view>
+        <view class="modal-body">
+            <textarea class="feedback-textarea" placeholder="请输入您的意见和建议" bindinput="handleFeedbackInput"></textarea>
+        </view>
+        <view class="modal-footer">
+            <button class="cancel-btn" bindtap="cancelFeedback">取消</button>
+            <button class="submit-btn" bindtap="submitFeedback">提交</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="container">
+    <image
+        src="{{imagePath}}"
+        class="long-image"
+        mode="widthFix"
+    ></image>
+</view>    

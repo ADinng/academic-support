@@ -1,0 +1,33 @@
+/* pages/homework/homework.wxss */
+.container {
+  padding: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.homework-item {
+  border-bottom: 1px solid #999;
+  padding: 30rpx 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* 使内容超出时自动换行 */
+}
+
+.homework-item text {
+  font-size: 32rpx;
+  white-space: normal; 
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.left-info {
+  width: 70%; /* 明确设置宽度 */
+}
+
+.right-info {
+  width: 30%; /* 明确设置宽度 */
+  margin-left: 20rpx;
+}

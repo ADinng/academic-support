@@ -1,0 +1,10 @@
+<!--pages/student/material/material.wxml-->
+<view class="container">
+  <view class="subject-list">
+    <block wx:for="{{subjects}}" wx:key="index">
+      <view class="subject-item" bindtap="goToSubjectPage" data-path="{{item.path}}">
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>

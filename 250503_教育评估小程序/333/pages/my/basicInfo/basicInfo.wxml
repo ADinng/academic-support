@@ -1,0 +1,61 @@
+<view class="basic-info-container">
+    <!-- 学生信息 -->
+    <view class="info-item" wx:if="{{userType ==='student'}}">
+        <text class="info-label">身份证号</text>
+        <text class="info-value">{{idCard}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType ==='student'}}">
+        <text class="info-label">性别</text>
+        <text class="info-value">{{gender}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType ==='student'}}">
+        <text class="info-label">班级</text>
+        <text class="info-value">{{class}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType ==='student'}}">
+        <text class="info-label">学院</text>
+        <text class="info-value">{{college}}</text>
+    </view>
+    <!-- 教师信息 -->
+    <view class="info-item" wx:if="{{userType === 'teacher'}}">
+        <text class="info-label">所属院系部门</text>
+        <text class="info-value">{{department}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'teacher'}}">
+        <text class="info-label">职务</text>
+        <text class="info-value">{{position}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'teacher'}}">
+        <text class="info-label">职称</text>
+        <text class="info-value">{{title}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'teacher'}}">
+        <text class="info-label">学历背景</text>
+        <text class="info-value">{{education}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'teacher'}}">
+        <text class="info-label">办公地点</text>
+        <text class="info-value">{{office}}</text>
+    </view>
+    <!-- 专家（原管理员）信息 -->
+    <view class="info-item" wx:if="{{userType === 'expert'}}">
+        <text class="info-label">所属部门</text>
+        <text class="info-value">{{expertDepartment}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'expert'}}">
+        <text class="info-label">专家角色</text>
+        <text class="info-value">{{expertRole}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'expert'}}">
+        <text class="info-label">管辖范围</text>
+        <text class="info-value">{{jurisdiction}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'expert'}}">
+        <text class="info-label">值班时间</text>
+        <text class="info-value">{{dutyTime}}</text>
+    </view>
+    <view class="info-item" wx:if="{{userType === 'expert'}}">
+        <text class="info-label">上级专家及其联系电话</text>
+        <text class="info-value">{{superiorExpert}}: {{superiorExpertPhone}}</text>
+    </view>
+</view>      

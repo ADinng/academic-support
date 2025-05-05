@@ -1,0 +1,22 @@
+/* pages/student/detail/detail1.wxss */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.detail-image {
+  width: auto;
+  height: 300rpx;
+  object-fit: cover;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail-description {
+  font-size: 28rpx;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+}

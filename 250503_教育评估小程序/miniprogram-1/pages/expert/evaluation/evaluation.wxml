@@ -1,0 +1,45 @@
+<view class="container">
+    <!-- 学年选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindYearChange" value="{{selectedYearIndex}}" range="{{rangeYears}}">
+            <view class="picker-item">选择学年: {{years[selectedYearIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 学期选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindSemesterChange" value="{{selectedSemesterIndex}}" range="{{rangeSemesters}}">
+            <view class="picker-item">选择学期: {{semesters[selectedSemesterIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 专业选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindMajorChange" value="{{selectedMajorIndex}}" range="{{rangeMajors}}">
+            <view class="picker-item">选择专业: {{majors[selectedMajorIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 课程选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindCourseChange" value="{{selectedCourseIndex}}" range="{{rangeCourses}}">
+            <view class="picker-item">选择课程: {{courses[selectedCourseIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 老师选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindTeacherChange" value="{{selectedTeacherIndex}}" range="{{rangeTeachers}}">
+            <view class="picker-item">选择老师: {{teachers[selectedTeacherIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 确定按钮 -->
+    <button bindtap="showEvaluationResult">查询评教结果</button>
+
+    <!-- 评教结果 -->
+    <view wx:if="{{showEvaluationResult}}" class="evaluation-result">
+        <view class="result-text">{{evaluationResult.text}}</view>
+        <view class="result-score" wx:if="{{evaluationResult.score !== null}}">评分: {{evaluationResult.score}}分</view>
+    </view>
+</view>

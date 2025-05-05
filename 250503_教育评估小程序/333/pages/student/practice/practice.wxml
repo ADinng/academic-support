@@ -1,0 +1,24 @@
+<view class="container">
+  <!-- 页眉部分 -->
+  <view class="header">
+    <text class="title">背题模式</text>
+  </view>
+
+  <!-- 显示题目部分 -->
+  <view wx:if="{{mode === 'review'}}" class="question">
+    <text class="question-number">【第{{currentQuestion + 1}}道题，共{{totalQuestions}}道题】</text>
+    <text class="question-text">{{questions[currentQuestion].text}}</text>
+    <view class="answer">
+      <text class="answer-text">答案：{{questions[currentQuestion].answer}}</text>
+    </view>
+  </view>
+
+  <!-- 上一题和下一题按钮 -->
+  <view class="navigation-buttons">
+    <button class="nav-button" bindtap="prevQuestion" disabled="{{currentQuestion === 0}}">上一题</button>
+    <button class="nav-button" bindtap="nextQuestion" disabled="{{currentQuestion === totalQuestions - 1}}">下一题</button>
+  </view>
+
+
+
+</view>

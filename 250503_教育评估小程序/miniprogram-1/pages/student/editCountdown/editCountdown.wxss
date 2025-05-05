@@ -1,0 +1,57 @@
+/* pages/editCountdown/editCountdown.wxss */
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.picker-container {
+  margin-bottom: 20px;
+}
+
+.picker {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.confirm-btn button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* pages/index/index.wxss */
+.countdown-wrapper {
+  background-color: #0054c1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.countdown-info {
+  text-align: center;
+}
+
+.countdown-title {
+  font-size: 18px;
+  color: white;
+}
+
+.countdown-timer {
+  margin-top: 10px;
+}
+
+.countdown-days,
+.countdown-remaining {
+  font-size: 16px;
+  color: white;
+}

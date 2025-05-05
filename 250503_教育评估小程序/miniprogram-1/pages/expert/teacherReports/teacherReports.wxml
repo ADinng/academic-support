@@ -1,0 +1,25 @@
+<!--pages/expert/teacherReports/teacherReports.wxml-->
+<view class="container">
+  <view class="title">教师评估报告</view>
+  <view class="description">专家可查看教师的评估等级与所在专业。</view>
+
+  <view class="teacher-list">
+    <block wx:for="{{teachers}}" wx:key="id">
+      <view class="teacher-item" bindtap="viewTeacherReport" data-id="{{item.id}}">
+        <view class="teacher-header">
+          <view class="teacher-name">{{item.name}}</view>
+          <view class="report-tag {{item.reportClass}}">{{item.report}}</view>
+        </view>
+        <view class="teacher-department">{{item.department}}</view>
+        <view class="teacher-meta">
+          <text>课程数：{{item.courses}}</text>
+          <text>｜最后评估：{{item.lastEval}}</text>
+        </view>
+        <view class="progress-bar">
+          <view class="progress-inner {{item.reportClass}}" style="width: {{item.score}} + '%'"></view>
+
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

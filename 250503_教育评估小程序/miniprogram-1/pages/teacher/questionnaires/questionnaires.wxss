@@ -1,0 +1,74 @@
+.container {
+  padding: 20rpx;
+  background-color: #f5f7fa;
+}
+
+.section {
+  margin-bottom: 40rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.header .title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #0054c1;
+}
+
+.report-input {
+  width: 100%;
+  min-height: 500rpx;
+  font-size: 30rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #0054c1;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  padding: 20rpx 0;
+}
+
+.question-stat {
+  margin-bottom: 30rpx;
+}
+
+.question-text {
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+  display: block;
+  font-weight: 500;
+}
+
+.score-text {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 8rpx;
+}
+
+.comment-section {
+  margin-top: 40rpx;
+}
+
+.comment-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  color: #333;
+}
+
+.comment-item {
+  font-size: 28rpx;
+  margin-bottom: 12rpx;
+  color: #444;
+}

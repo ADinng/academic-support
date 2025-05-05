@@ -1,0 +1,30 @@
+.container {
+  padding: 20rpx;
+  background-color: #fafafa;
+}
+
+.notification-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.arrow {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.detail-content {
+  padding: 20rpx;
+  background-color: #f0f0f0;
+  font-size: 30rpx;
+  color: #666;
+}

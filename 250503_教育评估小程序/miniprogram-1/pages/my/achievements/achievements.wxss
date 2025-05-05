@@ -1,0 +1,28 @@
+.container {
+  padding: 20rpx;
+  background-color: #fafafa;
+}
+
+.function-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.function-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.function-text {
+  font-size: 30rpx;
+  color: #333;
+  flex: 1;
+}
+
+.function-status {
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 350rpx;
+}

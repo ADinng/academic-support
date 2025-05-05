@@ -1,0 +1,28 @@
+<view class="container"> 
+  <!-- 顶部蓝色卡片 -->
+  <view class="header-card">
+    <text class="title">教师评估报告填写</text>
+    <view class="info">
+      <text>会议主题：{{ meeting.topic }}</text>
+      <text>会议时间：{{ meeting.time }}</text>
+    </view>
+  </view>
+
+  <!-- 报告填写区域 -->
+  <view class="section">
+    <text class="form-label">报告内容：</text>
+    <textarea
+      class="report-input"
+      placeholder=""
+      value="{{ reportContent }}"
+      bindinput="onInputChange"
+      maxlength="5000"
+      auto-height
+    ></textarea>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-section">
+    <button class="submit-btn" bindtap="submitReport">提交报告</button>
+  </view>
+</view>

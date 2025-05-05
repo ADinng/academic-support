@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="notification-item" bindtap="toggleVersionUpdate">
+        <text class="notification-title">版本更新提示</text>
+        <image class="arrow" src="/images/arrow_down.png" mode="aspectFit" wx:if="{{!showVersionUpdate}}"></image>
+        <image class="arrow" src="/images/arrow_up.png" mode="aspectFit" wx:if="{{showVersionUpdate}}"></image>
+    </view>
+    <view class="detail-content" wx:if="{{showVersionUpdate}}">
+        <text>{{versionUpdateContent}}</text>
+    </view>
+    <view class="notification-item" bindtap="toggleBugFix">
+        <text class="notification-title">系统 bug 修复提示</text>
+        <image class="arrow" src="/images/arrow_down.png" mode="aspectFit" wx:if="{{!showBugFix}}"></image>
+        <image class="arrow" src="/images/arrow_up.png" mode="aspectFit" wx:if="{{showBugFix}}"></image>
+    </view>
+    <view class="detail-content" wx:if="{{showBugFix}}">
+        <text>{{bugFixContent}}</text>
+    </view>
+</view>

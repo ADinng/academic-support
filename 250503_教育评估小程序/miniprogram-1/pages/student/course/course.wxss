@@ -1,0 +1,43 @@
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker-wrapper {
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+
+.picker-item {
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  padding: 10rpx;
+  background-color: #1aad19;
+  color: white;
+  margin-top: 10rpx;
+}
+
+.course-schedule {
+  padding: 20rpx;
+  border: 1px solid #ccc;
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+.course-schedule-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10rpx;
+}
+
+.course-schedule-images {
+  margin-top: 20rpx;
+}

@@ -1,0 +1,31 @@
+<!--pages/expert/qualityMonitor/qualityMonitor.wxml-->
+<view class="container">
+  <view class="title">本科评估记录</view>
+  <view class="description">
+    专家可以查看不同班级的学生评估记录，包括出勤率、作业优秀率等评分。
+  </view>
+
+  <!-- 班级列表 -->
+  <view class="class-list">
+    <block wx:for="{{classes}}" wx:key="classId">
+      <view class="class-item">
+        <view class="class-name">班级：{{item.className}}</view>
+        
+        <!-- 评估记录列表 -->
+        <view class="evaluation-list">
+          <block wx:for="{{item.evaluations}}" wx:key="id">
+            <view class="evaluation-item">
+              <view class="evaluation-student-name">{{item.studentName}}</view>
+              <view class="evaluation-course">课程：{{item.course}}</view>
+              <view class="evaluation-grade">成绩：{{item.grade}}</view>
+              <view class="evaluation-attendance">出勤率：{{item.attendance}}%</view>
+              <view class="evaluation-project">作业优秀率：{{item.projectRate}}%</view>
+              <view class="evaluation-feedback">反馈意见：{{item.feedback}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+

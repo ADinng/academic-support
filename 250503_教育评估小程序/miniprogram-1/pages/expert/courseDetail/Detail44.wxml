@@ -1,0 +1,3 @@
+<view class="fullscreen-image-container">
+  <image src="/images/mkszy.png" mode="aspectFill" class="fullscreen-image"></image>
+</view>

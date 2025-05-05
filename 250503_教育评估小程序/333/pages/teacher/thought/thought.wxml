@@ -1,0 +1,28 @@
+<!--pages/teacher/thought/thought.wxml-->
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="title">
+    <text class="title-text">教师思想动态</text>
+  </view>
+
+  <!-- 学习思想列表 -->
+  <view class="ideas-list">
+    <view class="idea-item" wx:for="{{ideas}}" wx:key="index">
+      <view class="idea-content">
+        <text class="idea-title">{{item.title}}</text>
+        <text class="idea-description">{{item.description}}</text>
+        <button class="view-more" bindtap="viewDetails" data-id="{{item.id}}">查看详情</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 学习思想详情弹框 -->
+  <view wx:if="{{showDetail}}" class="detail-dialog">
+    <view class="detail-dialog-content">
+      <text class="dialog-title">{{selectedIdea.title}}</text>
+      <text class="dialog-description">{{selectedIdea.description}}</text>
+      <text class="dialog-resource">学习资源：{{selectedIdea.resource}}</text>
+      <button class="close-btn" bindtap="closeDetail">关闭</button>
+    </view>
+  </view>
+</view>

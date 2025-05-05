@@ -1,0 +1,29 @@
+/* pages/student/management/management.wxss */
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+}
+
+.material-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.material-item {
+  background-color: white;
+  margin: 10rpx 0;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.copy-button {
+  background-color: #07C160;
+  color: white;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  font-size: 24rpx;
+}

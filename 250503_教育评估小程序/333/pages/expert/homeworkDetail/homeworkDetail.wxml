@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <text class="subject">{{homework.subject}}</text>
+    <text class="student">{{homework.student}} - {{homework.major}} {{homework.grade}}</text>
+  </view>
+
+  <!-- 添加 scroll-view 实现滚动 -->
+  <scroll-view class="content" scroll-y>
+    <view class="content-inner">
+      <text>{{homework.content}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="attachments" wx:if="{{homework.attachments && homework.attachments.length}}">
+    <text class="section-title">附件：</text>
+    <view wx:for="{{homework.attachments}}" wx:key="name" class="attachment-item">
+      <text>{{item.name}}</text>
+      <text class="file-info">{{item.type}} ({{formatFileSize(item.size)}})</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text class="date">提交日期: {{homework.date}}</text>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!-- pages/editCountdown/editCountdown.wxml -->
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="title">
+    <text>编辑倒计时</text>
+  </view>
+
+  <!-- 日期选择器 -->
+  <view class="picker-container">
+    <picker mode="date" value="{{selectedDate}}" bindchange="bindDateChange">
+      <view class="picker">
+        <text>选择倒计时日期：{{formattedDate}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <!-- 确认按钮 -->
+  <view class="confirm-btn">
+    <button bindtap="saveCountdown">确认保存</button>
+  </view>
+</view>

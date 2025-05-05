@@ -1,0 +1,96 @@
+.container {
+  padding: 32rpx;
+  background-color: #f8f9fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 标签栏 */
+.tab-switch {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e0ecff;
+  border-radius: 24rpx;
+  margin-bottom: 40rpx;
+  overflow: hidden;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 24rpx 0;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.tab-item.active {
+  background-color: #0054c1;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 题目区域 */
+.question-box {
+  background-color: #fff;
+  padding: 40rpx 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.06);
+  margin-bottom: 50rpx;
+}
+
+.question-number {
+  font-size: 26rpx;
+  color: #888;
+  margin-bottom: 16rpx;
+}
+
+.question-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option radio {
+  margin-right: 20rpx;
+}
+
+/* 按钮区域 */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.btn {
+  flex: 1;
+  padding: 24rpx;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.prev-btn {
+  background-color: #ccc;
+}
+
+.next-btn {
+  background-color: #0054c1;
+}
+
+.submit-btn {
+  background-color: #1abc9c;
+}

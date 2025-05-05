@@ -1,0 +1,26 @@
+.container {
+  padding: 20rpx;
+}
+
+.page-header {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.notice-list {
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  width: 100%;
+}
+
+.notice-item {
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden; /* 清除浮动影响 */
+}
+
+.notice-item:last-child {
+  border-bottom: none;
+}

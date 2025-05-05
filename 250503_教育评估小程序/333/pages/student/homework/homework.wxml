@@ -1,0 +1,32 @@
+<view class="container">
+  <!-- 收件人 -->
+  <view class="input-item">
+    <label>收件人（老师）：</label>
+    <input type="text" placeholder="请输入老师姓名" bindinput="handleReceiverInput" />
+  </view>
+  <!-- 主题 -->
+  <view class="input-item">
+    <label>主题（作业题目）：</label>
+    <input type="text" placeholder="请输入作业题目" bindinput="handleSubjectInput" />
+  </view>
+  <!-- 作业内容 -->
+  <view class="content-item">
+    <label>作业内容：</label>
+    <textarea placeholder="请输入作业内容，最多20000字" bindinput="handleContentInput" maxlength="20000"></textarea>
+    <view class="progress-bar">
+      <view class="progress" style="width: {{progress}}"></view>
+    </view>
+  </view>
+  <!-- 添加附件 -->
+  <view class="attachment-item">
+    <label>添加附件：</label>
+    <button bindtap="chooseAttachments">选择附件</button>
+    <view wx:if="{{attachments.length > 0}}">
+      <view wx:for="{{attachments}}" wx:key="index">
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 提交按钮 -->
+  <button bindtap="submitHomework">提交</button>
+</view>

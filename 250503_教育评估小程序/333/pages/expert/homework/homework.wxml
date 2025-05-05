@@ -1,0 +1,36 @@
+<view class="container">
+    <!-- 学年选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindYearChange" value="{{selectedYearIndex}}" range="{{years}}">
+            <view class="picker-item">选择学年: {{years[selectedYearIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 学期选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindSemesterChange" value="{{selectedSemesterIndex}}" range="{{semesters}}">
+            <view class="picker-item">选择学期: {{semesters[selectedSemesterIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 课程选择器 -->
+    <view class="picker-wrapper">
+        <picker bindchange="bindCourseChange" value="{{selectedCourseIndex}}" range="{{courses}}">
+            <view class="picker-item">选择课程: {{courses[selectedCourseIndex]}}</view>
+        </picker>
+    </view>
+
+    <!-- 确定按钮 -->
+    <button bindtap="showHomeworkList">查询作业</button>
+
+    <!-- 作业列表 -->
+    <view wx:if="{{showHomeworkList}}" class="homework-list">
+        <block wx:for="{{homeworkList}}" wx:key="index">
+            <view class="homework-item" bindtap="goToHomeworkDetail" data-index="{{index}}">
+                <text class="student-info">{{item.student}}</text>
+                <text class="subject-info">{{item.subject}}</text>
+                <text class="date-info">{{item.date}}</text>
+            </view>
+        </block>
+    </view>
+</view>

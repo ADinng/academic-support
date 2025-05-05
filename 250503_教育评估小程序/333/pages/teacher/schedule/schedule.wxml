@@ -1,0 +1,49 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <text class="title">授课信息与课程安排</text>
+
+  <!-- 学年与学期选择 -->
+  <view class="semester">
+    <text class="label">学年：</text>
+    <picker mode="selector" range="{{years}}" bindchange="onYearChange">
+      <view class="picker">{{selectedYear}}</view>
+    </picker>
+    
+    <text class="label">学期：</text>
+    <picker mode="selector" range="{{semesters}}" bindchange="onSemesterChange">
+      <view class="picker">{{selectedSemester}}</view>
+    </picker>
+  </view>
+
+  <!-- 课程信息展示 -->
+  <view class="course-info">
+    <view class="course">
+      <text class="label">科目：</text>
+      <text>{{courseSubject}}</text>
+    </view>
+    <view class="course">
+      <text class="label">课程类型：</text>
+      <text>{{courseType}}</text>
+    </view>
+    <view class="course">
+      <text class="label">课程性质：</text>
+      <text>{{courseNature}}</text>
+    </view>
+  </view>
+
+  <!-- 课程安排 -->
+  <view class="schedule">
+    <text class="label">课程安排：</text>
+    <view class="course-list">
+      <block wx:for="{{courseSchedule}}" wx:key="index">
+        <view class="course-item">
+          <text class="course-name">{{item.name}}</text>
+          <text class="course-time">{{item.time}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <button class="action-btn" bindtap="showCourseInfo">查看授课信息</button>
+</view>

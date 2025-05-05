@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 学年选择器 -->
+  <view class="picker-wrapper">
+    <picker bindchange="bindYearChange" value="{{selectedYearIndex}}" range="{{years}}">
+      <view class="picker-item">选择学年: {{years[selectedYearIndex]}}</view>
+    </picker>
+  </view>
+  <!-- 学期选择器 -->
+  <view class="picker-wrapper">
+    <picker bindchange="bindSemesterChange" value="{{selectedSemesterIndex}}" range="{{semesters}}">
+      <view class="picker-item">选择学期: {{semesters[selectedSemesterIndex]}}</view>
+    </picker>
+  </view>
+  <!-- 确定按钮 -->
+  <button bindtap="showScoreImages">确定</button>
+  
+  <!-- 成绩描述文字 -->
+  <view class="score-description">{{scoreDescription}}</view>
+
+  <!-- 成绩图片显示区域 -->
+  <view class="score-images" wx:if="{{showImages}}">
+    <block wx:for="{{scoreImages}}" wx:key="index">
+      <image src="{{item}}" class="score-image" mode="widthFix" bindtap="enlargeImage" data-src="{{item}}"/>
+    </block>
+    <!-- 下载按钮 -->
+    <button bindtap="downloadImages">下载成绩图片</button>
+  </view>
+  <!-- 显示暂无成绩的提示文字 -->
+  <view class="no-score-text" wx:if="{{showNoScoreText}}">该学期暂无成绩</view>
+</view>    

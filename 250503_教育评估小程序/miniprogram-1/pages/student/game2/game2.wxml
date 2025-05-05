@@ -1,0 +1,37 @@
+<view class="container">
+  <!-- 倒计时模块 -->
+  <view class="countdown">
+    <text>剩余时间: {{countdown}} 秒</text>
+  </view>
+
+  <!-- 当前题目 -->
+  <view class="question">
+    <text>{{currentQuestion.text}}</text>
+  </view>
+
+  <!-- 答案选项 -->
+  <view class="options">
+    <button wx:for="{{currentQuestion.options}}" wx:key="index" bindtap="answerQuestion" data-item="{{item}}">{{item}}</button>
+  </view>
+
+  <!-- 闯关进度 -->
+  <view class="progress">
+    <text>第 {{currentLevel}} 关 / {{questions.length}} 关</text>
+  </view>
+
+  <!-- 当前分数 -->
+  <view class="score">
+    <text>当前分数: {{score}} 分</text>
+  </view>
+
+  <!-- 提交答案的反馈 -->
+  <view class="feedback" style="color: {{feedbackColor}}">
+    <text>{{feedbackMessage}}</text>
+  </view>
+
+  <!-- 控制按钮 -->
+  <view class="buttons">
+    <button bindtap="previousQuestion" wx:if="{{currentLevel > 1}}">上一题</button>
+    <button bindtap="nextQuestion" wx:if="{{answered}}">下一题</button>
+  </view>
+</view>

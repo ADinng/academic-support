@@ -1,0 +1,137 @@
+/* pages/teacher/mental/mental.wxss */
+/* 页面容器 */
+/* 页面容器 */
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* 标题 */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 班级选择 */
+.class-select {
+  margin-bottom: 20px;
+}
+
+.class-select-title {
+  font-size: 18px;
+}
+
+.class-picker {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* 学生列表 */
+.student-list {
+  margin-top: 20px;
+}
+
+.student-item {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-item text {
+  font-size: 18px;
+}
+
+.score {
+  color: #007aff;
+}
+
+/* 弹框背景 */
+.result-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 增加透明度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 弹框内容 */
+.result-dialog-content {
+  width: 85%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* 提升阴影效果 */
+  overflow: hidden;
+  transform: translateY(-50px);
+  animation: slideIn 0.3s ease-out forwards; /* 弹出效果 */
+}
+
+/* 弹框进入动画 */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 标题 */
+.result-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* 得分信息 */
+.result-score {
+  font-size: 18px;
+  color: #007aff;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 建议信息 */
+.result-advice {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 关闭按钮 */
+.close-btn {
+  padding: 10px 25px;
+  background-color: #0054c1;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.close-btn:hover {
+  background-color: #003d94;
+}

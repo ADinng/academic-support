@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="header">
+    <text class="title">学生心理健康结果</text>
+  </view>
+
+  <!-- 班级选择 -->
+  <view class="class-select">
+    <text class="class-select-title">选择班级</text>
+    <picker mode="selector" range="{{classList}}" bindchange="onClassChange">
+      <view class="class-picker">
+        <text>{{selectedClass}}</text>
+      </view>
+    </picker>
+  </view>
+
+  <!-- 显示班级的平均分 -->
+  <view class="average-score">
+    <text>班级平均分: {{averageScore}}</text>
+  </view>
+
+  <!-- 学生列表 -->
+  <view class="student-list">
+    <block wx:for="{{studentList}}" wx:key="index">
+      <view class="student-item">
+        <text>{{item.name}}</text>
+        <!-- 查看按钮 -->
+        <button class="view-btn" bindtap="onViewStudentResult" data-index="{{index}}">查看结果</button>
+      </view>
+    </block>
+  </view>
+
+
+<!-- 学生详细信息弹框 -->
+<view wx:if="{{showStudentResult}}" class="result-dialog">
+  <view class="result-dialog-content">
+    <!-- 学生姓名 -->
+    <view class="result-title">学生: {{selectedStudent.name}}</view>
+    <!-- 学生得分 -->
+    <view class="result-score">得分: {{selectedStudent.score}}</view>
+    <!-- 学生建议 -->
+    <view class="result-advice">建议: {{selectedStudent.advice}}</view>
+    <!-- 关闭按钮 -->
+    <button class="close-btn" bindtap="closeDialog">关闭</button>
+  </view>
+</view>
+
+</view>

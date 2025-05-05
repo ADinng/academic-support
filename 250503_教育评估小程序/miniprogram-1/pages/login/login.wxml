@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="title">教育评估系统登录</view>
+    <view class="button-group">
+        <button class="{{activeButton ==='student'? 'active' : ''}}" data-type="student" bindtap="onButtonClick">学生</button>
+        <button class="{{activeButton === 'teacher'? 'active' : ''}}" data-type="teacher" bindtap="onButtonClick">教师</button>
+        <button class="{{activeButton === 'expert'? 'active' : ''}}" data-type="expert" bindtap="onButtonClick">管理员</button>  <!-- 这里文本保持为管理员，data-type改为expert -->
+    </view>
+    <view class="input-container">
+        <input class="input-field" placeholder="{{inputPlaceholders[activeButton][0]}}" data-index="0" bindinput="onInputChange" />
+        <input class="input-field" placeholder="{{inputPlaceholders[activeButton][1]}}" data-index="1" bindinput="onInputChange" />
+        <input class="input-field" placeholder="{{inputPlaceholders[activeButton][2]}}" data-index="2" bindinput="onInputChange" password />
+    </view>
+    <button class="login-button" bindtap="onLogin">登录</button>
+    <view class="error-message" wx:if="{{errorMessage}}">{{errorMessage}}</view>
+</view>        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,45 @@
+<view class="container">
+
+<!-- 教师评估报告 -->
+<view class="section">
+  <view class="header">
+    <text class="title">教师自评报告</text>
+  </view>
+  <textarea 
+    class="report-input" 
+    placeholder="请填写本学期教学反思等..." 
+    value="{{ reportContent }}" 
+    bindinput="onReportChange"
+    maxlength="5000"
+    auto-height
+  ></textarea>
+  <button class="submit-btn" bindtap="submitReport">提交报告</button>
+</view>
+
+<!-- 问卷调查分析 -->
+<view class="section">
+  <view class="header">
+    <text class="title">问卷调查反馈分析</text>
+  </view>
+
+  <!-- 每道题的统计 -->
+  <block wx:for="{{surveyStats}}" wx:key="id">
+    <view class="question-stat">
+      <text class="question-text">{{ index + 1 }}. {{ item.question }}</text>
+      <progress percent="{{ item.score }}" stroke-width="6" active backgroundColor="#eee" activeColor="#4caf50" />
+      <text class="score-text">平均分：{{ item.score }}/100</text>
+    </view>
+  </block>
+
+  <!-- 文本反馈展示 -->
+  <view class="comment-section">
+    <text class="comment-title">学生建议与评价：</text>
+    <block wx:for="{{comments}}" wx:key="id">
+      <view class="comment-item">
+        <text>• {{ item }}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+</view>

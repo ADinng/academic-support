@@ -1,0 +1,9 @@
+<view class="container">
+  <text class="title">请输入您的建议</text>
+  
+  <!-- 输入框，供学生填写建议 -->
+  <textarea class="suggestion-input" placeholder="填写您的建议" bindinput="onInput" />
+
+  <!-- 提交按钮 -->
+  <button class="submit-btn" bindtap="submitSuggestion">提交</button>
+</view>

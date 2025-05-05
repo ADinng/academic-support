@@ -1,0 +1,17 @@
+<view class="modal-container">
+    <view class="modal-content">
+        <view class="modal-header">
+            <text class="header-text">绑定手机号</text>
+        </view>
+        <view class="modal-body">
+            <view class="input-item">
+                <label class="input-label">请输入手机号</label>
+                <input class="input-field" type="number" placeholder="请输入手机号" bindinput="handlePhoneInput"/>
+            </view>
+        </view>
+        <view class="modal-footer">
+            <button class="cancel-btn" bindtap="cancelBindPhone">取消</button>
+            <button class="confirm-btn" bindtap="confirmBindPhone">确认</button>
+        </view>
+    </view>
+</view>
